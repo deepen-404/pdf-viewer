@@ -93,6 +93,11 @@ const PDFDisplay: React.FC<PDFDisplayProps> = React.memo(
               />
             </Document>
           </Worker>
+          <style>{`
+              .dark-pdf canvas {
+                  filter: invert(1) hue-rotate(180deg);
+              }
+          `}</style>
         </div>
       </div>
     );
