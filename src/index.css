@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.dark-pdf canvas {
-  filter: invert(1) hue-rotate(180deg);
+
+* {
+  font-family: 'Poppins', sans-serif;
 }

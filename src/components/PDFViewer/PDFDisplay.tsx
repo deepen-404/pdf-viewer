@@ -48,7 +48,7 @@ const PDFDisplay: React.FC<PDFDisplayProps> = React.memo(
         return (
             <div
                 className={cn(
-                    'tw-flex-1 tw-relative tw-w-full tw-overflow-auto tw-h-full tw-items-center border borer-danger',
+                    'tw-flex-1 tw-relative tw-w-full tw-overflow-auto tw-h-full tw-items-center',
                     {
                         'dark:tw-bg-gray-900': darkMode,
                         'tw-bg-gray-200': as === 'pdf-viewer',
@@ -82,11 +82,6 @@ const PDFDisplay: React.FC<PDFDisplayProps> = React.memo(
                         </Document>
                     </Worker>
                 </div>
-                {/* <style>{`
-                    .dark-pdf canvas {
-                        filter: invert(1) hue-rotate(180deg);
-                    }
-                `}</style> */}
             </div>
         );
     },

@@ -40,7 +40,7 @@ export interface IVideoMetadata {
     attemptDetails: IAttemptDetails;
 }
 
-function PDFViewer({ file,  fullScreen = false, as = 'pdf-viewer' }: PDFViewerProps) {
+function PDFViewer({ file,  fullScreen = true, as = 'pdf-viewer' }: PDFViewerProps) {
     const [numPages, setNumPages] = useState<number>(0);
     const [zoomLevel, setZoomLevel] = useState<number>(1);
     const [_metaData, setMetaData] = useState<any>(null);
@@ -66,6 +66,14 @@ function PDFViewer({ file,  fullScreen = false, as = 'pdf-viewer' }: PDFViewerPr
             setIsFullScreen(true);
         }
     };
+
+
+    useEffect(() => {
+        if(fullScreen){
+            setIsFullScreen(true);
+            handleFullScreen?.();
+        }
+    }, [fullScreen]);
 
     const exitFullScreen = () => {
         if (document.exitFullscreen) {
