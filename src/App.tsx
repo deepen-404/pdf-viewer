@@ -7,7 +7,7 @@ function App() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
-    <div className="tw-min-h-screen tw-flex tw-flex-col tw-items-center tw-justify-center tw-bg-gray-100 tw-py-10 ">
+    <div className="tw-min-h-screen tw-flex tw-flex-col tw-items-center tw-justify-center tw-bg-gray-900 tw-py-10 ">
       <div className="tw-flex tw-flex-col tw-items-center tw-gap-6">
         {/* Input Section */}
         <Button handleClick={() => inputRef?.current?.click()} variant="green">
@@ -23,8 +23,8 @@ function App() {
 
         {/* File Name */}
         {file && (
-          <p className="tw-text-gray-700 tw-text-sm tw-font-medium">
-            Selected file: <span className="tw-text-blue-500">{file.name}</span>
+          <p className="tw-text-gray-300 tw-text-sm tw-font-medium">
+            Selected file: <span className="tw-text-gray-100">{file.name}</span>
           </p>
         )}
 
